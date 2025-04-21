@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="student"></p>
+    
+    <p id="detail"></p>
+    <p id="static"></p>
+    <script>
+        class student{
+            constructor(name, date){
+                this.name = name
+                this.date = date
+            }
+            age(){
+                let date = new Date()
+                return date.getFullYear() - this.date
+            }
+            static he(){
+                return "hello"
+            }
+        }
+        student1 = new student("Riya", 2004)
+        document.getElementById("student").innerHTML = "My name is " + student1.name + " I am born in " + student1.date + " I am " + student1.age() + " dear school"
+        document.getElementById("static").innerHTML = student.he()
+        class car {
+            constructor(brand){
+                this.brand = brand
+            }
+            present(){
+                return "I have a " + this.brand
+            }
+        }aw
+        class model extends car{
+            constructor(brand,mod){
+                super(brand)
+                this.mod = mod
+            }
+            show(){
+                return this.present() + " with model " + this.mod
+            }
+        }
+        let car1 = new model("Lamborghini","mustang")
+        document.getElementById("detail").innerHTML = car1.show()
+
+    </script>
+</body>
+</html>
